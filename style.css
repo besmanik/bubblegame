@@ -1,18 +1,29 @@
 body {
-	background: blue;
+	background-image: url('bw-bubble.jpeg');
+	background-size: cover;	
+	background-repeat: no-repeat;
 }
-.canvas {
-	width: 80%;
-	height: 80%;
-	background: url('bw-bubble.jpeg');
-	background-size: 100%;
-	background-attachment: fixed;
-	margin-right: 10%;
-	margin-left: 10%;
+#canvas {
+	height: 100%;
+	width: auto;
+	position: absolute;
 }
-.gameBack {
-	top: 0;
-	height: 100vh
-	width: 100vh;
-	background: red;
+.dropbox {
+	height: 50px;
+	width: 100vw;
+	position: absolute;
+	display: inline-block;
+}
+#bubble1 {
+	height: 3em;
+	position: absolute;
+
+}
+#bubble2 {
+	height: 4em;
+	position: absolute;
+}
+#bubble3 {
+	height: 2em;
+	position: absolute;
 }
