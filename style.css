@@ -22,13 +22,16 @@ body {
 #bubble1 {
 	left: 0;
 	height: 5%;
+	flex-direction: row;
 
 }
 #bubble2 {
 	left: 20;
 	height: 7%;
+	flex-direction: row;
 }
 #bubble3 {
 	left: 0;
 	height: 10%;
+	flex-direction: row;
 }

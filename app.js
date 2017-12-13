@@ -30,8 +30,13 @@ bubbleArray.forEach(function(obj){
 });
 
 function spaceRandom(bub){
-	let leftSpacing = Math.floor(Math.random() * boardWidth +1);
-	$('.bubble').css({"margin-left": +leftSpacing+"px"})
+	//let leftSpacing = ;
+	for (var key in bubbleArray) {
+  		if (bubbleArray.hasOwnProperty(key)) {
+    let bubName = ("#" + bubbleArray[key]['name']);
+	$(bubName).css({"margin-left": +Math.floor(Math.random() * boardWidth +1)+"px"})
+	}
+}
 };
 spaceRandom();
 
