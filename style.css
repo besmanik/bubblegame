@@ -20,7 +20,7 @@ body {
 .bubble {
 	animation-name: float;
     animation-duration: 9s;
-    position: relative;
+    position: fixed;
 }
 #bubble1 {
 	left: 0;
@@ -32,6 +32,18 @@ body {
 
 }
 #bubble3 {
+	left: 0;
+	height: 10%;
+}
+#bubble4 {
+	left: 0;
+	height: 10%;
+}
+#bubble5 {
+	left: 0;
+	height: 10%;
+}
+#bubble6 {
 	left: 0;
 	height: 10%;
 }
