@@ -1,55 +1,76 @@
 $(document).ready(function(){
 	console.log('doc ready')
-})
+
 
 let boardWidth = $('#board').width();
-let bubbleArray = [];
-let bubbleLoop = 5;
+bubbleArray = [];
+let bubbleLoop = 2;
+let interval = setInterval(function(){	
+		}, 1000);
+count = 0;
+
 
 function Bubbles (name, image, value) {
 	this.name = name;
 	this.image = image;
 	this.value = value;
 	this.create = function (){
+		let idCount = 1;
 		$('#board').append(this.image);
-	};
+		$('img').each(function(){
+		$(this).attr('id', 'bubble'+idCount);
+		idCount ++;
+		});
+	}
 	this.attach = function(){
 		bubbleArray.push(this);
-	};
-	for (i = 1; i <= bubbleLoop; i++) {
-		this.attach();
-	};
+	}
+	this.attach();
 }
 
-let bubble1 = new Bubbles ("bubble1", "<img class='bubble' id='bubble1' src=bubb3.gif_c200>", 20);
-let bubble2 = new Bubbles ('bubble2', "<img class='bubble' id='bubble2' src=crazyBub.gif>", 10);
-let bubble3 = new Bubbles ('bubble3', "<img class='bubble' id='bubble3' src=crazyBub1.gif>", 30);
-let bubble4 = new Bubbles ("bubble4", "<img class='bubble' id='bubble4' src=bubb3.gif_c200>", 20);
-let bubble5 = new Bubbles ('bubble5', "<img class='bubble' id='bubble5' src=crazyBub.gif>", 10);
-let bubble6 = new Bubbles ('bubble6', "<img class='bubble' id='bubble6' src=multicolorbub.gif>", 40);
+let bubble1 = new Bubbles ("bubble1", "<img class='bubble' src=bubb3.gif_c200>", 20);
+let bubble2 = new Bubbles ('bubble2', "<img class='bubble' src=crazyBub.gif>", 10);
+let bubble3 = new Bubbles ('bubble3', "<img class='bubble' src=crazyBub1.gif>", 30);
+let bubble4 = new Bubbles ("bubble4", "<img class='bubble' src=bubb3.gif_c200>", 20);
+let bubble5 = new Bubbles ('bubble5', "<img class='bubble' src=crazyBub.gif>", 10);
+let bubble6 = new Bubbles ('bubble6', "<img class='bubble' src=multicolorbub.gif>", 40);
 
+	for (i = 1; i <= bubbleLoop; i++) {
+		setInterval(function(){	
+		}, 1000);
+	}
+	
 bubbleArray.forEach(function(obj){
 	obj.create();
-});
+})
 
+function setBubbleId(){
+	$('img').each(function(){
+		console.log('hello');
+		$(this).attr('id', 'bubble')
+	});
+}
 function spaceRandom(bub){
-	//let leftSpacing = ;
 	for (var key in bubbleArray) {
   		if (bubbleArray.hasOwnProperty(key)) {
-    let bubName = ("#" + bubbleArray[key]['name']);
-	$(bubName).css({"margin-left": +Math.floor(Math.random() * boardWidth +20)+"px"})
+    	let bubName = ("#" + bubbleArray[key]['name']);
+		$(bubName).css({"margin-left": +Math.floor(Math.random() * boardWidth +30)+"px"})
+		}
 	}
 }
-};
 spaceRandom();
 
 function popBubble(){
-	$('.bubble').click(function(){
+	$('.bubble').click(function(e){
+		count ++;
+		console.log(count);
 		(this).remove('.bubble');
 	});
 }
 popBubble();
 
+
+})
 
 
 
