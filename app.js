@@ -34,12 +34,18 @@ function spaceRandom(bub){
 	for (var key in bubbleArray) {
   		if (bubbleArray.hasOwnProperty(key)) {
     let bubName = ("#" + bubbleArray[key]['name']);
-	$(bubName).css({"margin-left": +Math.floor(Math.random() * boardWidth +1)+"px"})
+	$(bubName).css({"margin-left": +Math.floor(Math.random() * boardWidth -20)+"px"})
 	}
 }
 };
 spaceRandom();
 
+function popBubble(){
+	$('.bubble').click(function(){
+		(this).remove('.bubble');
+	});
+}
+popBubble();
 
 
 
