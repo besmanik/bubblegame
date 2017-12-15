@@ -4,12 +4,11 @@ $(document).ready(function(){
 
 let boardWidth = $('#board').width();
 bubbleArray = [];
-let bubbleLoop = 2;
-let interval = setInterval(function(){	
-		}, 1000);
+let bubbleLoop = 1;
 count = 0;
 
-
+for (var i = 0; i <= bubbleLoop; i++) {
+	
 function Bubbles (name, image, value) {
 	this.name = name;
 	this.image = image;
@@ -20,8 +19,8 @@ function Bubbles (name, image, value) {
 		$('img').each(function(){
 		$(this).attr('id', 'bubble'+idCount);
 		idCount ++;
-		});
-	}
+		})
+	};
 	this.attach = function(){
 		bubbleArray.push(this);
 	}
@@ -35,30 +34,17 @@ let bubble4 = new Bubbles ("bubble4", "<img class='bubble' src=bubb3.gif_c200>",
 let bubble5 = new Bubbles ('bubble5', "<img class='bubble' src=crazyBub.gif>", 10);
 let bubble6 = new Bubbles ('bubble6', "<img class='bubble' src=multicolorbub.gif>", 40);
 
-	for (i = 1; i <= bubbleLoop; i++) {
-		setInterval(function(){	
-		}, 1000);
-	}
-	
-bubbleArray.forEach(function(obj){
-	obj.create();
-})
+	bubbleArray.forEach(function(obj){
+		obj.create();
+});
+};
 
-function setBubbleId(){
+function newBubbleSpacer (){
 	$('img').each(function(){
-		console.log('hello');
-		$(this).attr('id', 'bubble')
-	});
-}
-function spaceRandom(bub){
-	for (var key in bubbleArray) {
-  		if (bubbleArray.hasOwnProperty(key)) {
-    	let bubName = ("#" + bubbleArray[key]['name']);
-		$(bubName).css({"margin-left": +Math.floor(Math.random() * boardWidth +30)+"px"})
-		}
-	}
-}
-spaceRandom();
+		$(this).css({"margin-left": +Math.floor(Math.random() * boardWidth +30)+"px"});
+	}); 
+};
+newBubbleSpacer();
 
 function popBubble(){
 	$('.bubble').click(function(e){
@@ -69,8 +55,8 @@ function popBubble(){
 }
 popBubble();
 
+});
 
-})
 
 
 
