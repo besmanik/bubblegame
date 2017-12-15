@@ -1,7 +1,22 @@
 body {
-	background-image: url('bw-bubble.jpeg');
-	background-size: cover;	
+	background-image: url('beerbubs.jpeg');
+	background-size: fill;	
 	background-repeat: no-repeat;
+}
+.score {
+	display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.time {
+	display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.start{
+	text-align: center;
 }
 #board {
 	height: 100vh;
@@ -11,16 +26,23 @@ body {
 	margin: 0 10% 0 10%;
 }
 .dropbox {
-	height: 10vh;
+	height: 1000px;
 	width: 100vw;
-	position: absolute;
-	display: inline-block;
+	top: -4000px;
+	overflow: hidden;
 	background-color: rgba(192,192,192,0.7);
 }
 .bubble {
+	position: relative;
+    max-height: 15%;
+}
+.bubble.start {
 	animation-name: float;
     animation-duration: 9s;
+    animation-delay: 0, 6s;
+  	animation-iteration-count: 2;
     position: fixed;
+    max-height: 15%;
 }
 #bubble1 {
 	left: 0;
