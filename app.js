@@ -5,7 +5,7 @@ $(document).ready(function(){
 let boardWidth = $('#board').width();
 bubbleArray = [];
 let bubbleLoop = 3;
-count = 0;
+count = 1;
 
 // function keepBubblesComing (){
 // 	if ($('.time') )
@@ -53,7 +53,7 @@ let bubble6 = new Bubbles ('bubble6', "<img class='bubble' src=multicolorbub.gif
 //this randomly spaces the bubbles 
 function newBubbleSpacer (){
 	$('img').each(function(){
-		$(this).css({"margin-left": +Math.floor(Math.random() * boardWidth +30)+"px"});
+		$(this).css({"margin-left": +Math.floor(Math.random() * boardWidth -50)+"px"});
 	}); 
 };
 newBubbleSpacer();
