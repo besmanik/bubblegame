@@ -23,6 +23,7 @@ body {
 	text-align: center;
 	margin-left: 45%;
 	margin-right: 45%;
+	bottom: 5em;
 }
 #board {
 	top: -4100px;
