@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="reset.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/reset.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
 	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
 	<title>Bubble Pop</title>
 </head>
@@ -11,21 +12,15 @@
 	<section class="gameBack">
 		<div id='board'>
 		</div>
-		<div class="dropbox">
-			<button class="start">Start!</button>
-			<span class='score'>0</span>
-			<span class='time'>30</span>
+		<button class="startbtn">Start!</button>
+			<div id='topScore'>Top Score:</div>
+			<span id='score'>0</span>
+			<!-- <span class='time'>30</span> -->
 			<ol class="highScores">
 					<li></li>
 					<li></li>
 					<li></li>
 				</ol>
-			
-			
-				
-			</span>	
-		</div>
-		<div class="colectionBox"></div>
 		
 	
 	</section>
@@ -34,6 +29,6 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="JS/app.js"></script>
 </body>
 </html>
